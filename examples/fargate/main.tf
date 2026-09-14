@@ -189,6 +189,7 @@ module "ecs_service" {
   }
 
   subnet_ids = module.vpc.private_subnets
+  vpc_id     = module.vpc.vpc_id
   security_group_ingress_rules = {
     alb_3000 = {
       description                  = "Service port"
