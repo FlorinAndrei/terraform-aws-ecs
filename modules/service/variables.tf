@@ -224,7 +224,7 @@ variable "subnet_ids" {
 }
 
 variable "vpc_id" {
-  description = "The VPC ID where to deploy the task or service. If not provided, the VPC ID is derived from the subnets provided"
+  description = "The VPC ID where to deploy the task or service. If not provided, the VPC ID is derived from the first subnet provided (requires the subnet to exist at plan time)"
   type        = string
   default     = null
 }
